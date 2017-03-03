@@ -353,9 +353,8 @@ public class THavalon
 
 			writer.println("You are Oberon.");
 			HashSet<String> seen = new HashSet<String>();
-			writer.println("Ability: After the cards from the 4th mission have been revealed, you may reveal that you are Oberon and cause the mission to fail, even if it would have succeeded. You may only do this if you were on the 4th mission team.");
-			writer.println("Drawback: You may only play Fail cards while on missions. Furthermore, you are not seen by other Evil characters as Evil.");
-			writer.println("");
+			HashSet<String> targets = new HashSet<String>();
+			
 			if(roles.contains("Mordred"))
 				seen.add(reverseAssignments.get("Mordred"));
 			if(roles.contains("Morgana"))
@@ -366,12 +365,23 @@ public class THavalon
 				seen.add(reverseAssignments.get("Colgrevance"));
 			if(roles.contains("Maelegant"))
 				seen.add(reverseAssignments.get("Maelegant"));
-
+			
+			if(roles.contains("Tristan") && roles.contains("Iseult"))
+				targets.add("The Lovers are");
+			if(roles.contains("Merlin"))
+				targets.add("Merlin is");
+			
 			for(String name : seen)
 			{
 				writer.println(name + " is a member of the evil council.");
 			}
-
+			
+			writer.println("");
+			
+			for(String name : targets)
+			{
+				writer.println(name + " a valid assassination target.");
+			}
 			writer.close();
 		}
 
@@ -385,8 +395,7 @@ public class THavalon
 			writer.println("You are Agravaine.");
 			
 			HashSet<String> seen = new HashSet<String>();
-			HashSet<String> targets = new HashSet<String>();
-			
+					
 			if(roles.contains("Morgana"))
 				seen.add(reverseAssignments.get("Morgana"));
 			if(roles.contains("Mordred"))
@@ -395,23 +404,16 @@ public class THavalon
 				seen.add(reverseAssignments.get("Colgrevance"));
 			if(roles.contains("Maelegant"))
 				seen.add(reverseAssignments.get("Maelegant"));
-
-			if(roles.contains("Tristan") && roles.contains("Iseult"))
-				targets.add("The Lovers are");
-			if(roles.contains("Merlin"))
-				targets.add("Merlin is");
+;
 			
 			for(String name : seen)
 			{
 				writer.println(name + " is a fellow member of the evil council.");
 			}
-			
 			writer.println("");
+			writer.println("Ability: After the cards from the 4th mission have been revealed, you may reveal that you are Agravaine and cause the mission to fail, even if it would have succeeded. You may only do this if you were on the 4th mission team.");
+			writer.println("Drawback: You may only play Fail cards while on missions.");
 			
-			for(String name : targets)
-			{
-				writer.println(name + " a valid assassination target.");
-			}
 
 			writer.close();
 		}
