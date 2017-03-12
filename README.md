@@ -59,24 +59,24 @@ Morgana's role is unchanged from the base rules of Avalon. Morgana knows most of
 Maelegant is an Evil role that exists to confuse Lancelot and Guinevere. To counterbalance that several good characters have information about them, Maelegant will know which player is Mordred (assuming there is a Mordred present). 
 
 #### Oberon 
-Oberon's role is significantly changed from the base rules of Avalon. Oberon is an Evil role that can be present in games with 7 or more players. Oberon knows who else is Evil, but other Evil players do not generally know who Oberon is, although they will know that there is an Oberon (by the lack of a visible Evil character).  
+Oberon's role is significantly changed from the base rules of Avalon. Oberon is an Evil role that can be present in games with 7 or more players. Oberon knows who else is Evil, but other Evil players do not generally know who Oberon is, although they will know that there is an Oberon (by the lack of a visible Evil character). Oberon also knows which Assassination targets are present in the game.
 
 - Oberon correctly sees Agravaine, Colgrevance, Maelegant, Mordred, and Morgana as Evil
 - Oberon is not seen by other Evil characters. 
 - Oberon is correctly seen by Merlin as Evil 
-- Oberon must play a Fail card whenever they are sent on a mission. 
+- Oberon knows if there is a Merlin in the game
+- Oberon knows if both Tristan and Iseult are in the game 
+
+#### Agravaine 
+Agravaine is an Evil role that can be present in games with 7 or more players. In addition to knowing the other visible Evil roles (e.g. all Evil except Oberon), Agravaine may single-handedly fail the fourth mission, via the Betrayal ability. 
+
+- Agravaine correctly sees Colgrevance, Maelegant, Mordred, and Morgana as Evil 
+- Agravaine must play a Fail card whenever they are sent on a mission. 
 
 To counteract these significant drawbacks, Oberon posseses a unique ability, Betrayal. 
 
 ##### Ability: Betrayal 
 After the cards from the 4th mission have been revealed, Oberon may formally declare as Oberon and cause the mission to fail, even if it would have succeeded. This ability is only usable if Oberon was on the 4th mission team. 
-
-#### Agravaine 
-Agravaine is an Evil role that can be present in games with 7 or more players. In addition to knowing the other visible Evil roles (e.g. all Evil except Oberon), Agravaine also knows which Assassination targets are present in the game. 
-
-- Agravaine correctly sees Colgrevance, Maelegant, Mordred, and Morgana as Evil 
-- Agravaine knows if there is a Merlin in the game
-- Agravaine knows if both Tristan and Iseult are in the game 
 
 #### Colgrevane 
 Colgrevance is an Evil role that can be present in games with 10 players. Colgrevance knows, precisely, the roles of all other Evil characters in the game. Thus, Colgrevane will be told not only who else is Evil, but which Evil role they possess. Note that Colgrevane *does* know who Oberon is, if Oberon is present in the game.  
