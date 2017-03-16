@@ -51,6 +51,7 @@ public class THavalon
 		good.add("Tristan");
 		good.add("Iseult");
 		good.add("Guinevere");
+		good.add("Lancelot");
 
 		if(numPeople >= 7)
 		{
