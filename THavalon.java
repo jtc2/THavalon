@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -44,11 +45,11 @@ public class THavalon
 		ArrayList<String> good = new ArrayList<String>();
 		ArrayList<String> evil = new ArrayList<String>();
 
+		
 		good.add("Merlin");
 		good.add("Percival");
 		good.add("Tristan");
 		good.add("Iseult");
-		good.add("Lancelot");
 		good.add("Guinevere");
 
 		if(numPeople >= 7)
@@ -67,8 +68,12 @@ public class THavalon
 		
 		if(numPeople >= 7)
 		{
-			evil.add("Oberon");
 			evil.add("Agravaine");
+		}
+		
+		if (numPeople >= 7 && numPeople != 9)
+		{
+			evil.add("Oberon");
 		}
 		
 		if(numPeople >= 10)
@@ -89,6 +94,7 @@ public class THavalon
 			System.err.println("Can't have that number of players");
 			System.exit(1);
 		}
+		
 		HashMap<String, String> assignments = new HashMap<String, String>();
 		HashMap<String, String> reverseAssignments = new HashMap<String, String>();
 		HashSet<String> roles = new HashSet<String>();
