@@ -59,7 +59,7 @@ Morgana's role is unchanged from the base rules of Avalon. Morgana knows most of
 Maelegant is an Evil role that exists to confuse Lancelot and Guinevere. To counterbalance that several good characters have information about them, Maelegant will know which player is Mordred (assuming there is a Mordred present). 
 
 #### Oberon 
-Oberon's role is significantly changed from the base rules of Avalon. Oberon is an Evil role that can be present in games with 7 or more players. Oberon knows who else is Evil, but other Evil players do not generally know who Oberon is, although they will know that there is an Oberon (by the lack of a visible Evil character). Oberon also knows which Assassination targets are present in the game.
+Oberon's role is significantly changed from the base rules of Avalon. Oberon is an Evil role that can be present in games with 7 or more players; however, Oberon cannot present in 9 player games. Oberon knows who else is Evil, but other Evil players do not generally know who Oberon is, although they will know that there is an Oberon (by the lack of a visible Evil character). Oberon also knows which Assassination targets are present in the game.
 
 - Oberon correctly sees Agravaine, Colgrevance, Maelegant, Mordred, and Morgana as Evil
 - Oberon is not seen by other Evil characters. 
