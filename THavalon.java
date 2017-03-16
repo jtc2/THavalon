@@ -45,14 +45,21 @@ public class THavalon
 		ArrayList<String> good = new ArrayList<String>();
 		ArrayList<String> evil = new ArrayList<String>();
 
-		
 		good.add("Merlin");
 		good.add("Percival");
 		good.add("Tristan");
 		good.add("Iseult");
 		good.add("Guinevere");
-		good.add("Lancelot");
-
+		
+		if (rand.nextBoolean()) 
+		{
+			good.add("Lancelot [good]");
+		}
+		else 
+		{
+			evil.add("Lancelot [evil]");
+		}
+		
 		if(numPeople >= 7)
 		{
 			good.add("Arthur");
@@ -65,7 +72,6 @@ public class THavalon
 		*/
 		evil.add("Mordred");
 		evil.add("Morgana");
-		evil.add("Maelegant");
 		
 		if(numPeople >= 7)
 		{
@@ -152,14 +158,14 @@ public class THavalon
 				seen.add(reverseAssignments.get("Morgana"));
 			if(roles.contains("Oberon"))
 				seen.add(reverseAssignments.get("Oberon"));
-			if(roles.contains("Maelegant"))
-				seen.add(reverseAssignments.get("Maelegant"));
 			if(roles.contains("Agravaine"))
 				seen.add(reverseAssignments.get("Agravaine"));
 			if(roles.contains("Colgrevance"))
 				seen.add(reverseAssignments.get("Colgrevance"));
-			if(roles.contains("Lancelot"))
-				seen.add(reverseAssignments.get("Lancelot"));
+			if(roles.contains("Lancelot [good]"))
+				seen.add(reverseAssignments.get("Lancelot [good]"));
+			if(roles.contains("Lancelot [evil]"))
+				seen.add(reverseAssignments.get("Lancelot [evil]"));
 
 			for(String name : seen)
 			{
@@ -220,46 +226,31 @@ public class THavalon
 			writer.println("You are Guinevere.");
 			HashSet<String> seen = new HashSet<String>();
 
-			if(roles.contains("Lancelot"))
-				seen.add(reverseAssignments.get("Lancelot"));
-			if(roles.contains("Maelegant"))
-				seen.add(reverseAssignments.get("Maelegant"));
+			if(roles.contains("Lancelot [good]"))
+				seen.add(reverseAssignments.get("Lancelot [good]"));
+			if(roles.contains("Lancelot [evil]"))
+				seen.add(reverseAssignments.get("Lancelot [evil]"));
 
 			for(String name : seen)
-				writer.println("You see " + name + " as your dear beloved Lancelot (or is it...?).");
+				writer.println("You see " + name + " as your dear beloved Lancelot.");
 
 			writer.close();
 		}
-		if(roles.contains("Lancelot"))
+		if(roles.contains("Lancelot [good]"))
 		{
 
-			String fileName = "game/" + reverseAssignments.get("Lancelot");
+			String fileName = "game/" + reverseAssignments.get("Lancelot [good]");
 			file = new File(fileName);
 			writer = new PrintWriter(fileName, "UTF-8");
-			writer.println("You are Lancelot.");
+			writer.println("You are Lancelot. You are on the Good team.");
 			HashSet<String> seen = new HashSet<String>();
 			
-			if(roles.contains("Maelegant"))
-				seen.add(reverseAssignments.get("Maelegant"));
-			if(roles.contains("Guinevere"))
-				seen.add(reverseAssignments.get("Guinevere"));
+			if(roles.contains("Arthur"))
+				seen.add(reverseAssignments.get("Arthur"));
 
 			for(String name : seen)
-				writer.println("You see " + name + " as your dear beloved Guinevere (or is it...?).");
+				writer.println("You see " + name + " as your glorious leader, Arthur.");
 
-			writer.close();
-		}
-		
-		if(roles.contains("Pelinor"))
-		{
-			//currently not in the game. merged with arthur
-			String fileName = "game/" + reverseAssignments.get("Pelinor");
-			file = new File(fileName);
-			writer = new PrintWriter(fileName, "UTF-8");
-
-			writer.println("You are Pelinor");
-			writer.println("Ability: If three of the first four missions fail, you may reveal that you are Pelinor. You may, after consulting the other players, attempt to identify all evil players in the game. If you are correct, then the assassination round occurs as if three missions had succeeded; should the evil team fail to assassinate a viable target, the good team wins.");
-			writer.println("Drawback: You know nothing. You are the least informed player in the game. Congratulations.");
 			writer.close();
 		}
 		
@@ -275,7 +266,7 @@ public class THavalon
 				goodChars.add("Percival");
 			if(roles.contains("Merlin"))
 				goodChars.add("Merlin");
-			if(roles.contains("Lancelot"))
+			if(roles.contains("Lancelot [good]"))
 				goodChars.add("Lancelot");
 			if(roles.contains("Guinevere"))
 				goodChars.add("Guinevere");
@@ -283,8 +274,6 @@ public class THavalon
 				goodChars.add("Tristan");
 			if(roles.contains("Iseult"))
 				goodChars.add("Iseult");
-			if(roles.contains("Pelinor"))
-				goodChars.add("Pelinor");
 			
 			writer.println("You are Arthur.");
 			writer.println("Ability: If three of the first four missions fail, you may reveal that you are Arthur. You may, after consulting the other players, attempt to identify all evil players in the game. If you are correct, then the assassination round occurs as if three missions had succeeded; should the evil team fail to assassinate a viable target, the good team wins.");
@@ -315,8 +304,8 @@ public class THavalon
 				seen.add(reverseAssignments.get("Agravaine"));
 			if(roles.contains("Colgrevance"))
 				seen.add(reverseAssignments.get("Colgrevance"));
-			if(roles.contains("Maelegant"))
-				seen.add(reverseAssignments.get("Maelegant"));
+			if(roles.contains("Lancelot [evil]"))
+				seen.add(reverseAssignments.get("Lancelot [evil]"));
 
 			for(String name : seen)
 			{
@@ -341,8 +330,8 @@ public class THavalon
 				seen.add(reverseAssignments.get("Agravaine"));
 			if(roles.contains("Colgrevance"))
 				seen.add(reverseAssignments.get("Colgrevance"));
-			if(roles.contains("Maelegant"))
-				seen.add(reverseAssignments.get("Maelegant"));
+			if(roles.contains("Lancelot [evil]"))
+				seen.add(reverseAssignments.get("Lancelot [evil]"));
 
 			for(String name : seen)
 			{
@@ -370,8 +359,8 @@ public class THavalon
 				seen.add(reverseAssignments.get("Agravaine"));
 			if(roles.contains("Colgrevance"))
 				seen.add(reverseAssignments.get("Colgrevance"));
-			if(roles.contains("Maelegant"))
-				seen.add(reverseAssignments.get("Maelegant"));
+			if(roles.contains("Lancelot [evil]"))
+				seen.add(reverseAssignments.get("Lancelot [evil]"));
 			
 			if(roles.contains("Tristan") && roles.contains("Iseult"))
 				targets.add("The Lovers are");
@@ -409,8 +398,8 @@ public class THavalon
 				seen.add(reverseAssignments.get("Mordred"));
 			if(roles.contains("Colgrevance"))
 				seen.add(reverseAssignments.get("Colgrevance"));
-			if(roles.contains("Maelegant"))
-				seen.add(reverseAssignments.get("Maelegant"));
+			if(roles.contains("Lancelot [evil]"))
+				seen.add(reverseAssignments.get("Lancelot [evil]"));
 ;
 			
 			for(String name : seen)
@@ -424,13 +413,13 @@ public class THavalon
 
 			writer.close();
 		}
-		if(roles.contains("Maelegant"))
+		if(roles.contains("Lancelot [evil]"))
 		{
 
-			String fileName = "game/" + reverseAssignments.get("Maelegant");
+			String fileName = "game/" + reverseAssignments.get("Lancelot [evil]");
 			file = new File(fileName);
 			writer = new PrintWriter(fileName, "UTF-8");
-			writer.println("You are Maelegant.");
+			writer.println("You are Lancelot. You are on the Evil team.");
 			
 			HashSet<String> seen = new HashSet<String>();
 
@@ -446,7 +435,7 @@ public class THavalon
 				writer.println(name + " is a fellow member of the evil council.");
 			}
 			if(roles.contains("Mordred"))
-				writer.println(reverseAssignments.get("Mordred") + " is Mordred.");
+				writer.println(reverseAssignments.get("Mordred") + " is your glorious leader, Mordred.");
 			writer.close();
 			
 		}
@@ -461,8 +450,8 @@ public class THavalon
 				writer.println(reverseAssignments.get("Morgana") + " is Morgana.");
 			if(roles.contains("Mordred"))
 				writer.println(reverseAssignments.get("Mordred") + " is Mordred.");
-			if(roles.contains("Maelegant"))
-				writer.println(reverseAssignments.get("Maelegant") + " is Maelegant.");	
+			if(roles.contains("Lancelot [evil]"))
+				writer.println(reverseAssignments.get("Lancelot [evil]") + " is Lancelot.");	
 			if(roles.contains("Agravaine"))
 				writer.println(reverseAssignments.get("Agravaine") + " is Agravaine.");	
 			if(roles.contains("Oberon"))
