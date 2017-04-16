@@ -49,7 +49,6 @@ public class THavalon
 		good.add("Percival");
 		good.add("Tristan");
 		good.add("Iseult");
-		good.add("Guinevere");
 		
 		if (rand.nextBoolean()) 
 		{
@@ -62,6 +61,7 @@ public class THavalon
 		
 		if(numPeople >= 7)
 		{
+			good.add("Guinevere");
 			good.add("Arthur");
 		}
 		/*
@@ -78,7 +78,7 @@ public class THavalon
 			evil.add("Agravaine");
 		}
 		
-		if (numPeople >= 7)
+		if (numPeople >= 7 && numPeople != 9)
 		{
 			evil.add("Oberon");
 		}
@@ -226,13 +226,13 @@ public class THavalon
 			writer.println("You are Guinevere.");
 			HashSet<String> seen = new HashSet<String>();
 
-			if(roles.contains("Lancelot [good]"))
-				seen.add(reverseAssignments.get("Lancelot [good]"));
+			if(roles.contains("Arthur"))
+				seen.add(reverseAssignments.get("Arthur"));
 			if(roles.contains("Lancelot [evil]"))
 				seen.add(reverseAssignments.get("Lancelot [evil]"));
 
 			for(String name : seen)
-				writer.println("You see " + name + " as your dear beloved Lancelot.");
+				writer.println("You see " + name + " as your either your luscious Lancelot ([evil]) or your lawfully wedded Arthur.");
 
 			writer.close();
 		}
@@ -368,11 +368,6 @@ public class THavalon
 			if(roles.contains("Lancelot [evil]"))
 				seen.add(reverseAssignments.get("Lancelot [evil]"));
 			
-			if(roles.contains("Tristan") && roles.contains("Iseult"))
-				targets.add("The Lovers are");
-			if(roles.contains("Merlin"))
-				targets.add("Merlin is");
-			
 			for(String name : seen)
 			{
 				writer.println(name + " is a member of the evil council.");
@@ -380,10 +375,9 @@ public class THavalon
 			
 			writer.println("");
 			
-			for(String name : targets)
-			{
-				writer.println(name + " a valid assassination target.");
-			}
+			writer.println("Ability: Should any mission get to the last proposal of the round, after the people on the mission have been named, you may declare as Oberon to replace one person on that mission with yourself.");
+			writer.println("");
+			writer.println("Note: You may not use this ability after two missions have already failed. Furthermore, you may only use this ability once per game.");
 			writer.close();
 		}
 
@@ -413,7 +407,7 @@ public class THavalon
 				writer.println(name + " is a fellow member of the evil council.");
 			}
 			writer.println("");
-			writer.println("Ability: After the cards from the 4th mission have been revealed, you may reveal that you are Agravaine and cause the mission to fail, even if it would have succeeded. You may only do this if you were on the 4th mission team.");
+			writer.println("Ability: On any mission you are on, after the mission cards have been revealed, should the mission not result in a Fail (such as via a Reversal, requiring 2 fails, or other mechanics), you may formally declare as Agravaine to force the mission to Fail anyway.");
 			writer.println("Drawback: You may only play Fail cards while on missions.");
 			
 
