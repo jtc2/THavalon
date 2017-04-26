@@ -89,13 +89,29 @@ public class THavalon
 		}
 
 		int numEvil = 0;
+		int numGood = players.size();
 		if(numPeople == 10 || numPeople == 11)
+		{
 			numEvil = 4;
-		else if(numPeople == 9 || numPeople == 8 || numPeople == 7)
+			numGood = numPeople - numEvil;
+	
+		}
+		else if(numPeople == 8 || numPeople == 7)
+		{
 			numEvil = 3;
+			numGood = numPeople-numEvil;
+		
+		}
+		else if(numPeople == 9)
+		{	
+			numEvil = 3; 
+			numGood = 4;
+		}
 		else if(numPeople == 6 || numPeople == 5)
+		{
 			numEvil = 2;
-
+			numGood = numPeople - numEvil;
+		}	
 		if(numEvil == 0)
 		{
 			System.err.println("Can't have that number of players");
@@ -117,7 +133,6 @@ public class THavalon
 			roles.add(evilRole);
 		}
 
-		int numGood = players.size();
 		for(int i = 0; i < numGood; i++)
 		{
 			int toRemove = rand.nextInt(players.size());
@@ -130,6 +145,25 @@ public class THavalon
 			roles.add(goodRole);
 		}
 
+		if (numPeople == 9)
+		{
+			int toRemoveA = rand.nextInt(players.size());
+			String goodPersonA = players.remove(toRemoveA);
+			toRemoveA = rand.nextInt(good.size());
+
+			assignments.put(goodPersonA, "Pelinor");
+			reverseAssignments.put("Pelinor", goodPersonA);
+			roles.add("Pelinor");
+			
+			int toRemoveB = rand.nextInt(players.size());
+			String goodPersonB = players.remove(toRemoveB);
+			toRemoveB = rand.nextInt(good.size());
+
+			assignments.put(goodPersonB, "Quesing Beast");
+			reverseAssignments.put("Questing Beast", goodPersonB);
+			roles.add("Questing Beast");
+		}
+		
 		File file = new File("game");
 		
 		if (file.exists() && file.isDirectory())
@@ -465,6 +499,38 @@ public class THavalon
 			writer.close();
 		}
 
+		if(roles.contains("Pelinor"))
+		{
+			
+			String fileName = "game/" + reverseAssignments.get("Pelinor");
+			file = new File(fileName);
+			writer = new PrintWriter(fileName, "UTF-8");
+			writer.println("You are Pelinor.");
+			writer.println("You must fulfill two of the following conditions to win:");
+			writer.println("[1]: If Good wins via three mission success.");
+			writer.println("[2]: If you go on the last mission with the Questing Beast.");
+			writer.println("[3]: If, after the Assassination Round, you can guess the Questing Beast.");
+			writer.close();
+		}
+		if(roles.contains("Questing Beast"))
+		{
+
+			String fileName = "game/" + reverseAssignments.get("Questing Beast");
+			file = new File(fileName);
+			writer = new PrintWriter(fileName, "UTF-8");
+			writer.println("You are Questing Beast.");
+			writer.println("You must play the 'Questing Beast was here' card on missions.");
+			writer.println("You must fulfill exactly one (not both) of the following conditions to win:");
+			writer.println("[1]: If Evil wins via three missions failing.");
+			writer.println("[2]: You never go on a mission with Pelinor.");
+			
+			if(roles.contains("Pelinor"))
+				writer.println(reverseAssignments.get("Pelinor") + " is Pelinor.");	
+			
+			writer.close();
+		}
+		
+		
 		String fileName = "game/start";
 		file = new File(fileName);
 		writer = new PrintWriter(fileName, "UTF-8");
