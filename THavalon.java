@@ -76,6 +76,7 @@ public class THavalon
 		if(numPeople >= 7)
 		{
 			evil.add("Agravaine");
+			evil.add("Colgrevance");
 		}
 		
 		if (numPeople >= 7 && numPeople != 9)
@@ -85,7 +86,7 @@ public class THavalon
 		
 		if(numPeople >= 10)
 		{
-			evil.add("Colgrevance");
+			good.add("Gawain");
 		}
 
 		int numEvil = 0;
@@ -289,10 +290,27 @@ public class THavalon
 			writer.println("");
 			writer.println("Ability: You are able to play Reversal cards while on missions. A Reversal card inverts the result of a mission; a mission that would have succeeded now fails and vice versa."); 
 			writer.println("");
-			writer.println("Note: In games with at least 7 players, a Reversal played on the 4th mission results in a failed mission if there is only one Fail card, and otherwise succeeds. Reversal does not interfere with Agravaine's ability to cause the 4th mission to fail.");
+			writer.println("Note: In games with at least 7 players, a Reversal played on the 4th mission results in a failed mission if there is only one Fail card, and otherwise succeeds. Reversal does not interfere with Agravaine's ability to cause the mission to fail.");
 			
 			writer.close();
 		}
+		
+		if(roles.contains("Gawain"))
+		{
+
+			String fileName = "game/" + reverseAssignments.get("Gawain");
+			file = new File(fileName);
+			writer = new PrintWriter(fileName, "UTF-8");
+			writer.println("You are Gawain.");
+			
+			writer.println("");
+			writer.println("Ability: Whenever a mission (other than the 1st) is sent, you may declare as Gawain to reveal a single person's played mission card. The mission card still affects the mission. (This ability functions identically to weak Inquisition and occurs after regular Inquisitions.) If the card you reveal is a Success, you are immediately 'Exiled' and may not go on missions for the remainder of the game, although you may still vote."); 
+			writer.println("");
+			writer.println("You may use this ability once per mission as long as you are neither on the mission team nor 'Exiled'. You may choose to not use your ability on any round, even if you would be able to use it.");
+			
+			writer.close();
+		}
+		
 		
 		if(roles.contains("Arthur"))
 		{
@@ -314,6 +332,8 @@ public class THavalon
 				goodChars.add("Tristan");
 			if(roles.contains("Iseult"))
 				goodChars.add("Iseult");
+			if(roles.contains("Gawain"))
+				goodChars.add("Gawain");
 			
 			writer.println("You are Arthur.");
 			writer.println("Ability: If three of the first four missions fail, you may reveal that you are Arthur. You may, after consulting the other players, attempt to identify all evil players in the game. If you are correct, then the assassination round occurs as if three missions had succeeded; should the evil team fail to assassinate a viable target, the good team wins.");
