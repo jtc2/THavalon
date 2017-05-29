@@ -1,5 +1,84 @@
 # THavalon
-An extended ruleset for the Resistance: Avalon 
+An extended ruleset for the Resistance: Avalon, primarily developed by me (Andrew Hitt/aquadrizzt), with help and extensive play-testing from Technology House, Inc. 
+
+## What is THavalon? 
+THavalon is a massive extension of the rules presented in Don Eskridge's social deception game, The Resistance: Avalon. The main point of THavalon is to provide every player of the game with a role and that to ensure every player in the game feels like they can make an impact on the result of the game. Over time, these rules have evolved in an effort to make the game both faster and more fun, as well as to fix some of the playstyles that have been established in our own metagame. 
+
+While you are welcome to pick and choose from the new rules, abilities, and roles listed below, the game is balanced under the assumption that you are using all of these rules simultaneously. However, at the end of the day, you're playing a board game to have fun (hopefully), so feel free to use these rules in whatever way you think would enhance you and your gaming group's experience. 
+
+Comments, criticisms, ideas, and suggestions are all always welcome. I'd love to hear any feedback that people have to offer. 
+
+## New Rules 
+These rules are in addition to the rules presented in the official rulebook. If a rule here and a rule in the rulebook are contradictory, use the rules here. 
+
+### Team Building Phase 
+These rule changes are designed to speed up the game and to encourage more thoughtful choices about Approving or Rejecting a mission proposal. 
+
+#### Proposals per Round
+The number of proposals in each Round is now equal to one more than the number of Evil roles in the game. 
+
+- In 5 and 6 player games, there will be 3 proposals per round. 
+- In 7, 8, and 9 player games, there will be 4 proposals per round. 
+- In 10 player games, there will be 5 proposals per round. 
+
+#### Force
+The last proposal of a round is no longer voted on; the Leader may choose any Team they want, and that Team is automatically considered to have been approved, as if by a majority of players voting Approve. (This replaces the rule where Evil wins if five Teams are rejected in a single round.) 
+
+#### Inquisition
+Inquisition is a new mechanic to encourage players to consider voting for earlier proposals in a round. Inquisition has two varieties: "Strong", and "Weak". Both Strong and Weak Inquisition provide the Leader of the Team with powerful information gathering abilities during the Quest Phase. 
+
+When Inquisition is in effect, players on the Team select the Quest card they wish to play and place it face down in front of them (or another way of signalling that their decision has been made), but the cards are not immediately shuffled together. 
+
+In the case of Strong Inqusition, which only happens should a majority of players vote Approve for the first Team proposal of a Round with 5 Team proposals (e.g. only in 10 player games if using all other rules presented here). Strong Inquisition requires the Leader to choose between two options: 1) remove a player's card but not reveal it, or 2) reveal a player's card. All other Quest cards are then shuffled together and revealed as per usual.  
+
+Weak Inqusition only happens if 1) a majority of players vote Approve for the second Team proposal of a Round with 5 Team proposals, or 2) a majority of players vote Approve for the first Team proposal of a Round with 4 Team proposals. Weak Inquisition requires the Leader to choose a player's card to reveal. All other Quest cards are then shuffled together and revealed as per usual.  
+
+Cards that are revealed but not removed by either Inqusition effect still affect the results of the mission. The Leader is allowed to use Inquisition on their own Quest card if they so desire, but they must use the ability (e.g. the Leader cannot choose to not use Inquisition if it has been earned). 
+
+Strong Inquisition and Weak Inquisition can each only occur once per game. If Strong Inquisition has already been used that game, and the first Team proposal of a Round is sent (which would normally earn Strong Inquisition), the Leader is considered to have gained the Weak Inquisition ability instead.  
+
+#### Summary of Changes 
+This table shows the various rules affecting Team proposals for various numbers of players. 
+<table>
+<tr> 
+<td> <b>Players</b> </td> 
+<td> <b>1st</b> </td> 
+<td> <b>2nd</b> </td> 
+<td> <b>3rd</b> </td> 
+<td> <b>4th</b> </td> 
+<td> <b>5th</b> </td> 
+</tr>
+<tr>
+<td> <b>5/6</b> </td>
+<td> Normal </td>
+<td> Normal </td>
+<td> <i>Force</i> </td>
+<td> -- </td>
+<td> -- </td> 
+</tr>
+<tr>
+
+<td> <b>7/8/9</b> </td> 
+<td> <i>Weak Inq.</i> </td>
+<td> Normal </td>
+<td> Normal </td>
+<td> <i>Force</i> </td>
+<td> -- </td> 
+</tr>
+
+<tr>
+<td> <b>10</b> </td>
+<td> <i>Strong Inq.</i> </td>
+<td> <i>Weak Inq.</i> </td>
+<td> Normal </td>
+<td> Normal </td>
+<td> <i>Force</i> </td>
+</tr>
+</table>
+
+### Quest Phase 
+
+### Assassination Phase 
 
 ## Roles
 
