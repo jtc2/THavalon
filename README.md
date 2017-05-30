@@ -106,6 +106,9 @@ Evil is considered to have won if they correctly identify Merlin, they correctly
 
 
 ## Roles
+In addition to the new rules listed above, THavalon offers almost a dozen new or reworked roles. It should be noted that not all roles listed here will be in any given game. There will always be the appropriate number of Good and Evil roles for the number of players in the game, but beyond that the roles present are randomized. This means that for roles that see a list of other roles, there is no guarantee that they will see as many people as expected. For example, Percival may only see one person, and they must then determine whether that person is Merlin or Morgana. It is also possible for someone to see no one; if there is neither a Merlin nor a Morgana, Percival will only be aware that neither of these roles are present in the current game. 
+
+The only time that roles are guaranteed to be in the game is during 9 player games; both Pelinor and the Questing Beast roles are guaranteed to appear in 9 player games.
 
 ### Good (Loyal Servants of Arthur) 
 The goal of Good players is to have three missions succeed, and then have Merlin and the Lovers survive the Assassination round. 
@@ -120,27 +123,47 @@ Merlin's role is largely unchanged from the base rules of Avalon. They are shown
 Merlin is a valid target for Assassination. 
 
 #### Percival
-Percival's role is unchanged from the base rules of Avalon. They know which players have the Merlin or Morgana roles, but not which role is possessed by each player. 
+Percival's role is unchanged from the base rules of Avalon. They know which players have the Merlin or Morgana roles, but not which role is possessed by either player. 
 
-- Percival correctly sees Merlin as Merlin
-- Percival incorrectly sees Morgana as Merlin 
+- Percival sees Merlin and Morgana, indistinguishably. 
 
 #### Tristan and Iseult 
-Tristan and Iseult ("The Lovers") are two Good roles that provide their associated players with the knowledge that the other is also Good. 
+Tristan and Iseult ("The Lovers") are two Good roles that know each other as Good. 
 
 The Lovers are a valid target for Assassination.  
 
-#### Guinevere and Lancelot
-Guinevere and Lancelot (commonly referred to as "weak lovers") are two Good roles that provide their associated players with knowledge about both the other person and Maelegant (an Evil role). To make matters worse, Merlin will incorrectly perceive Lancelot as Evil. 
+#### Lancelot 
+Lancelot is a Good role that is allowed to play Reversal cards. They are provided no other information, and they appear Evil to Merlin. 
 
-- Guinevere sees Maelegant and Lancelot.
-- Lancelot sees Maelegant and Guinvere, and is also perceived to be Evil by Merlin. 
+#### Guinevere 
+Guinevere is a Good role who behaves similar to Percival, in that they are shown several people. They are given a list of players who have the Lancelot, Maelegant, and Arthur roles, but must figure it out for themselves which player has which role. 
+
+- Guinevere sees Lancelot, Maelegant, and Arthur, indistinguishably.
+
+Guinevere only appears in games with at least 7 players. 
 
 #### Arthur 
-Arthur is the only Good character to possess an activated ability. Arthur knows which other good roles are present in the game, but has no information about which players possess any of the roles present. Furthermore, Arthur has an ability, called Redemption, which allows Good one final chance at victory. 
+Arthur is a Good role that knows which other good roles are present in the game, but has no information about which players possess any of the roles present. Furthermore, Arthur has an ability, called Redemption, which allows Good one final chance at victory. 
+
+Arthur only appears in games with at least 7 players. 
 
 ##### Ability: Redemption 
 If three of the first four missions fail, the player who has the Arthur role may formally declare as Arthur. You may, after consulting the other players, attempt to identify all evil players in the game. If you are correct, then the assassination round occurs as if three missions had succeeded; should the evil team fail to assassinate a viable target, the good team wins.
+
+
+#### Gawain 
+Gawain is a Good role who possess a variant of the Inquisition ability. Furthermore, Gawain is shown a list of three people, of which at least one player is Good. 
+
+- Gawain is shown one random Good player, and two random players who could be Good or Evil, indistinguishably. 
+
+Gawain only appears in games with 10 players. 
+
+##### Gawain: Inquisition 
+Starting on the second Round, if a Team without Gawain is approved, Gawain can declare and use a Weak Inquisition ability on a player of their choice. If Gawain reveals a Success, they become "Exiled" and may no longer be put on mission teams or use this ability, although they may still propose Teams and vote on proposed Teams. If Gawain reveals a Fail or a Reversal, they are not "Exiled" and they may continue to be put on teams or use their ability on rounds they are not on. Gawain may (but is not required to) use their ability on any mission after they declare, provided they are not on the mission team or Exiled. 
+
+Gawain may choose to not use their ability, even if they would be able to, but should they choose to declare as Gawain during a Quest phase, they must use their ability that round if able. Gawain's ability occurs after any other Inquisitions are resolved, and it does not count towards the once per game limit of typical Inquisitions. 
+
+In 10 player games, players are expected to assume there is a Gawain (e.g. choosing the Quest card they wish to play and making it clear which card they have chosen to play for that Quest), even if they don't know if Gawain is present. This is to preserve the surprise of the initial Gawain declaration. 
 
 ### Evil (Minions of Mordred) 
 The goal of Evil players is to have either three missions fail, or should Good have won, assassinate either Merlin or the Lovers. 
