@@ -14,6 +14,15 @@ These rules are in addition to the rules presented in the official rulebook. If 
 ### Team Building Phase 
 These rule changes are designed to speed up the game and to encourage more thoughtful choices about Approving or Rejecting a mission proposal. 
 
+#### First Round Proposals 
+The way Teams are proposed on the First round is slightly different than the rest of the game. Instead of five proposals which are each voted on sequentially, there are only two proposals for the first round. After everyone has seen their role information, two players are selected at random (with a third player chosen to begin the 2nd round). 
+
+These two players each propose a team of the appropriate number of people for the first Round (2 for games of 5, 6 or 7 players, 3 for games of 8, 9 or 10 players). Everyone then votes, with Approve representing a vote for the first person's proposal and Reject representing a vote for the second person's proposal. In case of a tie, the Team proposed by the person farther in the proposal order from the person who begins the 2nd round is chosen to go on the Quest. 
+
+In an effort to make this balanced, there is to be absolutely no substantive discussion (e.g. "oh where *is* my Fail card?", "this should succeed right?", etc.) prior to all Quest cards being played. 
+
+After the results of the 1st Quest are revealed, play begins with the person randomly selected to have the first proposal of the 2nd Round. 
+
 #### Proposals per Round
 The number of proposals in each Round is now equal to one more than the number of Evil roles in the game. 
 
