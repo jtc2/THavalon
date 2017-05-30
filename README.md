@@ -31,9 +31,9 @@ When Inquisition is in effect, players on the Team select the Quest card they wi
 
 In the case of Strong Inqusition, which only happens should a majority of players vote Approve for the first Team proposal of a Round with 5 Team proposals (e.g. only in 10 player games if using all other rules presented here). Strong Inquisition requires the Leader to choose between two options: 1) remove a player's card but not reveal it, or 2) reveal a player's card. All other Quest cards are then shuffled together and revealed as per usual.  
 
-Weak Inqusition only happens if 1) a majority of players vote Approve for the second Team proposal of a Round with 5 Team proposals, or 2) a majority of players vote Approve for the first Team proposal of a Round with 4 Team proposals. Weak Inquisition requires the Leader to choose a player's card to reveal. All other Quest cards are then shuffled together and revealed as per usual.  
+Weak Inquisition only happens if 1) a majority of players vote Approve for the second Team proposal of a Round with 5 Team proposals, or 2) a majority of players vote Approve for the first Team proposal of a Round with 4 Team proposals. Weak Inquisition requires the Leader to choose a player's card to reveal. All other Quest cards are then shuffled together and revealed as per usual.  
 
-Cards that are revealed but not removed by either Inqusition effect still affect the results of the mission. The Leader is allowed to use Inquisition on their own Quest card if they so desire, but they must use the ability (e.g. the Leader cannot choose to not use Inquisition if it has been earned). 
+Cards that are revealed but not removed by either Inquisition effect still affect the results of the mission. The Leader is allowed to use Inquisition on their own Quest card if they so desire, but they must use the ability (e.g. the Leader cannot choose to not use Inquisition if it has been earned). 
 
 Strong Inquisition and Weak Inquisition can each only occur once per game. If Strong Inquisition has already been used that game, and the first Team proposal of a Round is sent (which would normally earn Strong Inquisition), the Leader is considered to have gained the Weak Inquisition ability instead.  
 
@@ -77,8 +77,33 @@ This table shows the various rules affecting Team proposals for various numbers 
 </table>
 
 ### Quest Phase 
+There are only two changes to the Quest Phase, one of which is explained in the Inquisition section (under Team Building Phase, above). 
+
+#### Reversal 
+In most games of THavalon, players who are sent on Quests will receive three Quest cards instead of two. The additional card is a Reversal, and is only playable by players who have the Lancelot and Maelegant roles. 
+
+When played, a Reversal inverts the result of the mission. Two Reversals cancel each other out. If there is at least one Fail card played along with a single Reversal, the mission is considered to have succeeded. If there are no Fail cards and a single Reversal, the mission is considered to have failed. 
+
+For Quests that require 2 Fails to be considered a failed Quest, there is a slight caveat as explained below. In most cases, a Reversal on a 2-Fails-required Quests behaves as expected, excluding the circumstance in which a single Reversal is played with no Fail cards (which would be expected to count as a Fail). 
+
+- If a single Reversal and no Fails are played, the Quest is considered to have *succeeded*.  
+- If a single Reversal and a single Fail are both played, the Quest is considered to have failed. 
+- If a single Reversal and two or more Fails are played, the Quest is considered to have succeeded. 
+
+#### Questing Beast Was Here 
+In 9 player games, there are two roles added, one of which has its own Quest card. The player assigned the Questing Beast role in the game is required to play "Questing Beast Was Here" cards whenever they are sent on missions; they may not play any other Quest card. This is to aid the player with the Pelinor role in identifying the Questing Beast. Other than being conspicuous, Questing Beast Was Here cards function identically to Success cards in terms of mission results. 
 
 ### Assassination Phase 
+The Assassination Phase remains largely unchanged, but there are several new options for Evil to choose from when identifying the person(s) they wish to Assassinate. Should the Good team fulfill any of their win conditions, the Evil team is allowed to choose one of the following three Assassination options.
+
+- Assassinating a single person as Merlin. 
+- Assassinating two people as the Lovers (Tristan and Iseult). 
+- Assassinating no one. 
+
+Evil is welcome to discuss amongst themselves, but at the end of discussion, the ranking Assassin (e.g. the person who appears first in this list: Mordred, Morgana, Maelegant, Agravaine, Colgrevance, Oberon) makes the final decision of who to Assassinate. 
+
+Evil is considered to have won if they correctly identify Merlin, they correctly identify both of the two Lovers, or they choose to assassinate no one and there is neither a Merlin nor a pair of Lovers in the game.
+
 
 ## Roles
 
