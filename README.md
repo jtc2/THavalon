@@ -228,3 +228,22 @@ Colgrevance is an Evil role that can be present in games with 10 players. Colgre
 - Colgrevance correctly sees Mordred, Morgana, Maelegant, Agravaine, and Oberon, and knows their role. 
 - Colgrevance is aware of Oberon
 - Colgrevance is correctly seen by Merlin as Evil. 
+
+Colgrevance only appears in games with at least 7 players. 
+
+### Neutral 
+The goal of Neutral roles depends on the role. Currently, the two neutral roles are guaranteed to appear in 9 player games, and will not appear in any other game. (Note that these roles are currently not balanced, but are certainly entertaining). 
+
+#### Pelinor 
+Pelinor is, for the most part, a Good role but with one additional objective: locate the Questing Beast and then go on a Quest with them. Pelinor wins if at least two of the following three criteria are met: 
+
+1) Pelinor is on the Team when a "Questing Beast Was Here" card is played. 
+2) After the conclusion of any post-game rounds (e.g. Arthur Redemption or Assassination), Pelinor can name which player is the Questing Beast.  
+3) The Good team wins via three Quests succeeding. 
+
+#### The Questing Beast
+The Questing Beast strives to evade Pelinor's desperate attempts to locate them. To make this more challenging, the Questing Beast is told which player is Pelinor. Whenever the Questing Beast is on a Team, they must play a "Questing Beast Was Here" card, which generally functions identically to a "Success" card.
+
+The Questing Beast wins if exactly one of the following two criteria are met: 
+1) The Questing Beast never is on a Team with Pelinor. 
+2) The Evil team wins via three Quests failing. 
