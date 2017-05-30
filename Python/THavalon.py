@@ -32,10 +32,8 @@ def main():
 	good_roles = ["Merlin", "Percival", "Tristan", "Iseult"]
 	evil_roles = ["Mordred", "Morgana"]
 
-	if random.randint(0, 1):
-		good_roles.append("Lancelot [good]")
-	else:
-		evil_roles.append("Lancelot [evil]")
+	good_roles.append("Lancelot")
+	evil_roles.append("Maelegant")
 
 
 	if num_players >= 7:
@@ -114,8 +112,8 @@ def main():
 		for evil_player in evil_players:
 			if assignments[evil_player] != "Mordred":
 				seen.append(evil_player)
-		if "Lancelot [good]" in good_roles_in_game:
-			seen.append(reverse_assignments["Lancelot [good]"])
+		if "Lancelot" in good_roles_in_game:
+			seen.append(reverse_assignments["Lancelot"])
 		random.shuffle(seen)
 
 		# and write this info to Merlin's file
@@ -170,9 +168,9 @@ def main():
 			else: 
 				file.write("Nobody loves you.\n")
 
-	if "Lancelot [good]" in good_roles_in_game: 
+	if "Lancelot" in good_roles_in_game: 
 		# write ability to Lancelot's file 
-		player_name = reverse_assignments["Lancelot [good]"] 
+		player_name = reverse_assignments["Lancelot"] 
 		filename = "game/" + player_name 
 		with open(filename, "w") as file:
 			file.write("You are Lancelot. You are on the Good team. \n\n") 
@@ -185,8 +183,10 @@ def main():
 		seen = []
 		if "Arthur" in good_roles_in_game:
 			seen.append(reverse_assignments["Arthur"])
-		if "Lancelot [evil]" in evil_roles_in_game:
-			seen.append(reverse_assignments["Lancelot [evil]"])
+		if "Maelegant" in evil_roles_in_game:
+			seen.append(reverse_assignments["Maelegant"])
+		if "Lancelot" in good_roles_in_game:
+			seen.append(reverse_assignments["Lancelot"])
 		random.shuffle(seen)
 
 		# and write this info to Guinevere's file
@@ -195,7 +195,7 @@ def main():
 		with open(filename, "w") as file:
 			file.write("You are Guinevere.\n")
 			for seen_player in seen:
-				file.write("You see " + seen_player + " as either your luscious Lancelot ([evil]) or your lawfully wedded Arthur.\n")
+				file.write("You see " + seen_player + " as either your luscious Lancelot, your lawfully wedded Arthur, or your kidnapper Maelegant.\n")
 
 	if "Arthur" in good_roles_in_game:
 		# determine which roles Arthur sees
@@ -287,12 +287,12 @@ def main():
 			file.write("\nAbility: On any mission you are on, after the mission cards have been revealed, should the mission not result in a Fail (such as via a Reversal, requiring 2 fails, or other mechanics), you may formally declare as Agravaine to force the mission to Fail anyway.\n\n");
 			file.write("Drawback: You may only play Fail cards while on missions.\n");
 
-	if "Lancelot [evil]" in evil_roles_in_game: 
+	if "Maelegant" in evil_roles_in_game: 
 		# write ability to Lancelot's file 
-		player_name = reverse_assignments["Lancelot [evil]"] 
+		player_name = reverse_assignments["Maelegant"] 
 		filename = "game/" + player_name 
 		with open(filename, "w") as file:
-			file.write("You are Lancelot. You are on the Evil team. \n\n") 
+			file.write("You are Maelegant. \n\n") 
 			for evil_player in evil_players:
 				if evil_player != player_name:
 					file.write(evil_player + " is a fellow member of the evil council.\n")
