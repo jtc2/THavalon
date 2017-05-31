@@ -232,18 +232,20 @@ Colgrevance is an Evil role that can be present in games with 10 players. Colgre
 Colgrevance only appears in games with at least 7 players. 
 
 ### Neutral 
-The goal of Neutral roles depends on the role. Currently, the two neutral roles are guaranteed to appear in 9 player games, and will not appear in any other game. (Note that these roles are currently not balanced, but are certainly entertaining). 
+The goal of Neutral roles depends on the role. Currently, the two neutral roles are guaranteed to appear in 9 player games, and will not appear in any other game. (Note that these roles are currently not playtested, and thus may be hilariously unbalanced). 
 
 #### Pelinor 
-Pelinor is, for the most part, a Good role but with one additional objective: locate the Questing Beast and then go on a Quest with them. Pelinor wins if at least two of the following three criteria are met: 
+Pelinor's goal is to find the Questing Beast, and then ideally go on a Quest with them. Pelinor can win in one of three ways. 
 
-1) Pelinor is on the Team when a "Questing Beast Was Here" card is played. 
-2) After the conclusion of any post-game rounds (e.g. Arthur Redemption or Assassination), Pelinor can name which player is the Questing Beast.  
-3) The Good team wins via three Quests succeeding. 
+1) There are no Questing Beast Was Here cards played at any point in the game. 
+2) Pelinor is on a Quest where a Questing Beast Was Here card is also played, and 3 Quests succeed. 
+3) If neither of the first two win conditions are fulfilled by the conclusion of the game, Pelinor declares (before any other post-game rounds) and chooses one person they believe to be the Questing Beast. Pelinor wins if they are correct, and loses if they are incorrect. 
 
 #### The Questing Beast
-The Questing Beast strives to evade Pelinor's desperate attempts to locate them. To make this more challenging, the Questing Beast is told which player is Pelinor. Whenever the Questing Beast is on a Team, they must play a "Questing Beast Was Here" card, which generally functions identically to a "Success" card.
+The Questing Beast's goal is to make their presence known, and then to evade Pelinor for the rest of the game. The Questing Beast is told which player is Pelinor prior to the beginning of the game. Furthermore, to make their presence more conspicuous, the Questing Beast must play Questing Beast Was Here cards whenever they are sent on a Quest. Once per game, the Questing Beast can choose to play a Success instead of a Questing Beast Was Here card, in order to throw Pelinor off their trail. 
 
-The Questing Beast wins if exactly one of the following two criteria are met: 
-1) The Questing Beast never is on a Team with Pelinor. 
-2) The Evil team wins via three Quests failing. 
+The Questing Beast wins if all three of these conditions are true: 
+
+1) At least one Questing Beast Was Here card is played at any point in the game. 
+2) Either a) Pelinor is never on a mission where a Questing Beast Was Here card is played; or b) 3 Quests fail. 
+3) Pelinor fails to identify the Questing Beast at the end of the game. 
