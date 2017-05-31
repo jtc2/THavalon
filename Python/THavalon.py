@@ -317,18 +317,19 @@ def main():
 		pelinor_filename = "game/" + pelinor
 		with open(pelinor_filename, "w") as file:
 			file.write("You are Pelinor.\n\n")
-			file.write("You must fulfill two of the following conditions to win:\n")
-			file.write("[1]: If Good wins via three mission success.\n")
-			file.write("[2]: If you go on the last mission with the Questing Beast.\n")
-			file.write("[3]: If, after the Assassination Round, you can guess the Questing Beast.\n")
+			file.write("You win if one of the following conditions are met:\n")
+			file.write("[1]: No Questing Beast Was Here cards are played.\n")
+			file.write("[2]: You are on a mission where a Questing Beast Was Here Card is played, and three missions succeed.\n")
+			file.write("[3]: If neither of the previous two conditions are met at the end of the game, you declare as Pelinor prior to Assassination and name the person you believe to be the Questing Beast. You are told if you are correct at the conclusion of any other post-game phases. If you are correct, you win.\n")
 
 		questing_beast_filename = "game/" + questing_beast
 		with open(questing_beast_filename, "w") as file:
 			file.write("You are the Questing Beast.\n")
-			file.write("You must play the 'Questing Beast was here' card on missions.\n\n")
-			file.write("You must fulfill exactly one (not both) of the following conditions to win:\n")
-			file.write("[1]: If Evil wins via three missions failing.\n")
-			file.write("[2]: You never go on a mission with Pelinor.\n\n")
+			file.write("You must play the 'Questing Beast Was Here' card on missions. Once per game, you can play a Success card instead of a Questing Beast Was Here card.\n\n")
+			file.write("You win if all of the following conditions are met:\n")
+			file.write("[1]: You play at least one Questing Beast Was Here card.\n")
+			file.write("[2]: Either a) Pelinor is never on a mission where a Questing Beast Was Here card is played; or b) 3 Quests fail.\n\n")
+			file.write("[3]: Pelinor fails to identify you after the conclusion of the game.\n\n")
 			file.write(pelinor + " is Pelinor.\n")
 
 
