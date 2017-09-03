@@ -239,7 +239,9 @@ Pelinor's goal is to find the Questing Beast, and then ideally go on a Quest wit
 
 1) There are no Questing Beast Was Here cards played at any point in the game. 
 2) Pelinor is on a Quest where a Questing Beast Was Here card is also played, and 3 Quests succeed. 
-3) If neither of the first two win conditions are fulfilled by the conclusion of the game, Pelinor declares (before any other post-game rounds) and chooses one person they believe to be the Questing Beast. Pelinor wins if they are correct, and loses if they are incorrect. 
+3) If the only Questing Beast Was Here card was played on the final Quest of the game (e.g. at the same time that three missions had now succeeded or three missions had failed), Pelinor declares (before any other post-game rounds) and chooses one person they believe to be the Questing Beast. After all other post-game rounds are completed (after Redemption and/or Assassination), the person Pelinor has chosen informs Pelinor of whether they were correct or not. Pelinor wins if they were correct, and loses if they were incorrect. 
+
+
 
 #### The Questing Beast
 The Questing Beast's goal is to make their presence known, and then to evade Pelinor for the rest of the game. The Questing Beast is told which player is Pelinor prior to the beginning of the game. Furthermore, to make their presence more conspicuous, the Questing Beast must play Questing Beast Was Here cards whenever they are sent on a Quest. Once per game, the Questing Beast can choose to play a Success instead of a Questing Beast Was Here card, in order to throw Pelinor off their trail. 
@@ -248,4 +250,4 @@ The Questing Beast wins if all three of these conditions are true:
 
 1) At least one Questing Beast Was Here card is played at any point in the game. 
 2) Either a) Pelinor is never on a mission where a Questing Beast Was Here card is played; or b) 3 Quests fail. 
-3) Pelinor fails to identify the Questing Beast at the end of the game. 
+3) Pelinor fails to identify the Questing Beast at the end of the game. (Note that Pelinor cannot attempt to guess the Questing Beast unless the only Questing Beast Was Here card was played on the last Quest of the game.) 
