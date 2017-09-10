@@ -214,8 +214,8 @@ def main():
 				if seen_role != "Arthur":
 					file.write(seen_role + "\n")
 			file.write("\n")
-			file.write("Ability: Redemption\n")
-			file.write("If three of the first four missions fail, you may reveal that you are Arthur. You may, after consulting the other players, attempt to identify all evil players in the game. If you are correct, then the assassination round occurs as if three missions had succeeded; should the evil team fail to assassinate a viable target, the good team wins.\n")
+			file.write("Ability: Proclamation\n")
+			file.write("If two missions have failed, you may formally reveal that you are Arthur, establishing that you are Good for the remainder of the game. You may still propose and vote on missions, as well as be chosen to be part of a mission team, as per usual.\n")
 
 	if "Gawain" in good_roles_in_game: 
 		# determine what Gawain sees 
