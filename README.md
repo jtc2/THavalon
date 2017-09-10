@@ -156,8 +156,8 @@ Arthur is a Good role that knows which other good roles are present in the game,
 
 Arthur only appears in games with at least 7 players. 
 
-##### Ability: Redemption 
-If three of the first four missions fail, the player who has the Arthur role may formally declare as Arthur. You may, after consulting the other players, attempt to identify all evil players in the game. If you are correct, then the assassination round occurs as if three missions had succeeded; should the evil team fail to assassinate a viable target, the good team wins.
+##### Ability: Proclamation 
+After two Quests have Failed, you may (but are not required to) formally declare as Arthur, establishing you as a Good player for the remainder of the game. You may still propose teams, vote on proposals, and be selected to go on Quests, as usual. You may use this ability at any point in the game after two Quests have Failed.
 
 
 #### Gawain 
