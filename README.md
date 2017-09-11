@@ -191,6 +191,12 @@ Morgana's role is unchanged from the base rules of Avalon. Morgana knows most of
 - Morgana is not aware of Oberon
 - Morgana is incorrectly seen by Percival as Merlin 
 
+
+##### Ability: Sorceress 
+Whenever Morgana has a proposal that is not the last proposal of the round (e.g. they do not have Force), they may declare as Morgana and reverse team proposal order for the rest of the game. The remaining proposals for the current round are granted to the people sitting next to the person who proposed the first team of the round (if proposals are typically made clockwise, it begins with the person to the right of the first proposer; if proposals are typically made counterclockwise, it begins with the person to the left of the first proposer). Proposals then proceed counterclockwise (if originally clockwise), or clockwise (if originally counterclockwise). 
+
+Morgana using this ability counts as one of the proposals for their round. 
+
 #### Maelegant 
 Maelegant is an Evil role that is allowed to play Reversal cards and knows most of the other Evil team members. 
 
