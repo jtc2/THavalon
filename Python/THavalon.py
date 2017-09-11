@@ -265,6 +265,8 @@ def main():
 			for evil_player in evil_players:
 				if evil_player != player_name:
 					file.write(evil_player + " is a fellow member of the evil council.\n")
+			file.write("Ability: Once per game, when you would propose a mission team, you may declare as Morgana and permanently reverse mission order. The next proposal is granted to the person sitting next to the first proposer of the round. Morgana may NOT use this ablity if they have the last proposal of a round.\n");
+
 
 	if "Oberon" in evil_roles_in_game:
 		player_name = reverse_assignments["Oberon"]
