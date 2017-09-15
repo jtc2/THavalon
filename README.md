@@ -117,6 +117,8 @@ Evil is considered to have won if they correctly identify Merlin, they correctly
 ## Roles
 In addition to the new rules listed above, THavalon offers almost a dozen new or reworked roles. It should be noted that not all roles listed here will be in any given game. There will always be the appropriate number of Good and Evil roles for the number of players in the game, but beyond that the roles present are randomized. This means that for roles that see a list of other roles, there is no guarantee that they will see as many people as expected. For example, Percival may only see one person, and they must then determine whether that person is Merlin or Morgana. It is also possible for someone to see no one; if there is neither a Merlin nor a Morgana, Percival will only be aware that neither of these roles are present in the current game. 
 
+The one exception to roles being generated independently is that, in games with at least 7 players, a single Lover (e.g. a Tristan with no Iseult or vice versa) will always be converted to Uther during the initalization of the game. This means that there cannot be both Lovers and Uther in any given game. 
+
 The only time that roles are guaranteed to be in the game is during 9 player games; both Pelinor and the Questing Beast roles are guaranteed to appear in 9 player games.
 
 ### Good (Loyal Servants of Arthur) 
@@ -140,6 +142,13 @@ Percival's role is unchanged from the base rules of Avalon. They know which play
 Tristan and Iseult ("The Lovers") are two Good roles that know each other as Good. 
 
 The Lovers are a valid target for Assassination.  
+
+Note that in 5 and 6 player games, it is possible for there to be only one Lover. In games with at least 7 players, if there is only one Lover present, they become Uther instead (see below). 
+
+#### Uther 
+Uther is a Good role that replaces a lone Lover in games with at least 7 players. Uther is told that one random person is also Good, but is not provided any information on their role beyond that. 
+
+Uther cannot appear in games with less than 7 players, or in a game where both Tristan and Iseult are present. 
 
 #### Lancelot 
 Lancelot is a Good role that is allowed to play Reversal cards. They are provided no other information, and they appear Evil to Merlin. 
