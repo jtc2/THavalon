@@ -97,7 +97,25 @@ def main():
 		assignments[evil_player] = player_role
 		reverse_assignments[player_role] = evil_player
 		evil_roles_in_game.add(player_role)
-
+	
+	# lone tristan
+	if ("Tristan" in good_roles_in_game and "Iseult" not in good_roles_in_game and num_players >= 7):
+		good_roles_in_game.remove("Tristan")
+		good_roles_in_game.add("Uther")
+		tristan_player = reverse_assignments["Tristan"]
+		assignments[tristan_player] = "Uther" 
+		del reverse_assignments["Tristan"]
+		reverse_assignments["Uther"] = tristan_player
+	
+	# lone iseult
+	if ("Iseult" in good_roles_in_game and "Tristan" not in good_roles_in_game and num_players >= 7):
+		good_roles_in_game.remove("Iseult")
+		good_roles_in_game.add("Uther")
+		iseult_player = reverse_assignments["Iseult"]
+		assignments[iseult_player] = "Uther" 
+		del reverse_assignments["Iseult"]
+		reverse_assignments["Uther"] = iseult_player
+		
 	# delete and recreate game directory
 	if os.path.isdir("game"):
 		shutil.rmtree("game")
@@ -176,7 +194,7 @@ def main():
 			file.write("You are Lancelot. You are on the Good team. \n\n") 
 			file.write("Ability: Reversal \n")	
 			file.write("You are able to play Reversal cards while on missions. A Reversal card inverts the result of a mission; a mission that would have succeeded now fails and vice versa. \n \n")
-			file.write("Note: In games with at least 7 players, a Reversal played on the 4th mission results in a failed mission if there is only one Fail card, and otherwise succeeds. Reversal does not interfere with Agravaine's ability to cause the mission to fail.")
+			file.write("Note: In games with at least 7 players, a Reversal played on the 4th mission results in a failed mission if there is only one Fail card, and otherwise succeeds. Reversal does not interfere with Agravaine's ability to cause the mission to fail\n")
 
 	if "Guinevere" in good_roles_in_game:
 		# determine who Guinevere sees
@@ -242,7 +260,19 @@ def main():
 			file.write("\nAbility: Whenever a mission (other than the 1st) is sent, you may declare as Gawain to reveal a single person's played mission card. The mission card still affects the mission. (This ability functions identically to weak Inquisition and occurs after regular Inquisitions.) If the card you reveal is a Success, you are immediately 'Exiled' and may not go on missions for the remainder of the game, although you may still vote and propose missions.\n\n")
 			file.write("You may use this ability once per mission as long as you are neither on the mission team nor 'Exiled'. You may choose to not use your ability on any round, even if you would be able to use it.\n");
 
-
+	stalked_good = None;
+	
+	if "Uther" in good_roles_in_game:
+		# write this info to Uther's file
+		player_name = reverse_assignments["Uther"]
+		filename = "game/" + player_name
+		good_players_no_uther = set(good_players) - set([player_name]) 
+		stalked_good = random.sample(good_players_no_uther, 1)[0] 
+		with open(filename, "w") as file:
+			file.write("You are Uther.\n")
+			file.write("You are stalking " + stalked_good + "; they are also good.\n")
+			# write Uther's info to file
+			
 	# make list of evil players seen to other evil
 	if "Oberon" in evil_roles_in_game:
 		evil_players = list(set(evil_players) - set([reverse_assignments["Oberon"]]))
@@ -334,7 +364,12 @@ def main():
 			file.write("[3]: Pelinor fails to identify you after the conclusion of the game.\n\n")
 			file.write(pelinor + " is Pelinor.\n")
 
-
+#uther
+#	if stalked_good: 
+#		stalked_good_filename = "game/" + stalked_good 
+#		with open(stalked_good_filename, "a") as file: 
+#			file.write("\n \n \nYou are being stalked... o.o");
+		
 	# write start file
 	with open("game/start", "w") as file:
 		file.write("The players proposing teams for the first mission are:\n")
