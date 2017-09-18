@@ -3,18 +3,16 @@
 import os
 import random
 import shutil
+import sys
 
 def main():
-	# get the number of players
-	num_players = int(input("How many people are playing?\n"))
-	if num_players < 5 or num_players > 10:
+	if not (6 <= len(sys.argv) <= 11):
 		print("Invalid number of players")
 		exit(1)
-	
-	# get the names of players
-	players = set() # use as set to avoid duplicate players
-	for player_num in range(1, num_players+1):
-		players.add(input("Who is player " + str(player_num) + "?\n"))
+
+	players = sys.argv[1:]
+	num_players = len(players)
+	players = set(players) # use as set to avoid duplicate players
 	players = list(players) # convert to list
 	random.shuffle(players) # ensure random order, though set should already do that
 	if len(players) != num_players:
@@ -27,6 +25,9 @@ def main():
 	# first two proppose for the first mission, last is starting player of second round
 	first_mission_proposers = three_players[:2]
 	second_mission_starter = three_players[2]
+
+	all_good_roles_in_order = ["Percival", "Merlin", "Lancelot", "Tristan", "Iseult", "Uther", "Arthur", "Guinevere", "Gawain"]
+	all_evil_roles_in_order = ["Mordred", "Morgana", "Maelegant", "Agravaine", "Colgrevance", "Oberon"]
 
 	# assign the roles in the game
 	good_roles = ["Merlin", "Percival", "Tristan", "Iseult"]
@@ -379,9 +380,15 @@ def main():
 
 	# write do not open
 	with open("game/DoNotOpen", "w") as file:
-		file.write("Player -> Role\n")
-		for player in players:
-			file.write(player + " -> " + assignments[player] + "\n")
+		file.write("Player -> Role\n\nGOOD TEAM:\n")
+		for role in all_good_roles_in_order:
+			if role in reverse_assignments:
+				file.write(reverse_assignments[role] + " -> " + role + "\n")
+		file.write("\n\nEVIL TEAM:\n")
+		for role in all_evil_roles_in_order:
+			if role in reverse_assignments:
+				file.write(reverse_assignments[role] + " -> " + role + "\n")
+
 
 if __name__ == "__main__":
 	main()
