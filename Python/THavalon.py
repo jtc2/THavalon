@@ -26,7 +26,7 @@ def main():
 	first_mission_proposers = three_players[:2]
 	second_mission_starter = three_players[2]
 
-	all_good_roles_in_order = ["Percival", "Merlin", "Lancelot", "Tristan", "Iseult", "Uther", "Arthur", "Guinevere", "Gawain"]
+	all_good_roles_in_order = ["Percival", "Merlin", "Galahad", "Tristan", "Iseult", "Uther", "Arthur", "Lancelot", "Guinevere", "Ygraine", "Gawain"]
 	all_evil_roles_in_order = ["Mordred", "Morgana", "Maelegant", "Agravaine", "Colgrevance", "Oberon"]
 
 	# assign the roles in the game
@@ -116,7 +116,25 @@ def main():
 		assignments[iseult_player] = "Uther" 
 		del reverse_assignments["Iseult"]
 		reverse_assignments["Uther"] = iseult_player
-		
+	
+	# lone guinevere -> ygraine
+	if ("Guinevere" in good_roles_in_game and "Lancelot" not in good_roles_in_game and "Arthur" not in good_roles_in_game and "Maelegant" not in evil_roles_in_game and num_players >= 7):
+		good_roles_in_game.remove("Guinevere")
+		good_roles_in_game.add("Ygraine")
+		guinevere_player = reverse_assignments["Guinevere"]
+		assignments[guinevere_player] = "Ygraine" 
+		del reverse_assignments["Guinevere"]
+		reverse_assignments["Ygraine"] = guinevere_player
+	
+	# lone percival -> galahad
+	if ("Percival" in good_roles_in_game and "Merlin" not in good_roles_in_game and "Morgana" not in evil_roles_in_game and num_players >= 7):
+		good_roles_in_game.remove("Percival")
+		good_roles_in_game.add("Galahad")
+		percival_player = reverse_assignments["Percival"]
+		assignments[percival_player] = "Galahad" 
+		del reverse_assignments["Percival"]
+		reverse_assignments["Galahad"] = percival_player
+	
 	# delete and recreate game directory
 	if os.path.isdir("game"):
 		shutil.rmtree("game")
@@ -273,6 +291,36 @@ def main():
 			file.write("You are Uther.\n")
 			file.write("You are stalking " + stalked_good + "; they are also good.\n")
 			# write Uther's info to file
+	
+	stalked_evil = None;
+		
+	if "Ygraine" in good_roles_in_game:
+		# write this info to Ygraine's file
+		player_name = reverse_assignments["Ygraine"]
+		filename = "game/" + player_name
+		evil_players_no_mordred = set(evil_players) - set(reverse_assignments["Mordred"]) 
+		stalked_evil = random.sample(evil_players_no_mordred, 1)[0] 
+		with open(filename, "w") as file:
+			file.write("You are Ygraine.\n")
+			file.write("You are stalking " + stalked_evil + "; they are evil.\n")
+			file.write("\n (The following roles are not in the game: Guinevere, Lancelot, Arthur, and Maelegant.)\n")
+			
+	if "Galahad" in good_roles_in_game:
+		# determine which roles Galahad sees
+		seen = []
+		for evil_role in evil_roles_in_game:
+			seen.append(evil_role)
+		random.shuffle(seen)
+
+		# and write this info to Arthur's file
+		player_name = reverse_assignments["Galahad"]
+		filename = "game/" + player_name
+		with open(filename, "w") as file:
+			file.write("You are Galahad.\n\n")
+			file.write("The following evil roles are in the game:\n")
+			for seen_role in seen:
+					file.write(seen_role + "\n")
+			file.write("\n (The following roles are not in the game: Percival, Merlin, and Morgana.)\n")
 			
 	# make list of evil players seen to other evil
 	if "Oberon" in evil_roles_in_game:
