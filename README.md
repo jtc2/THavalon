@@ -117,7 +117,12 @@ Evil is considered to have won if they correctly identify Merlin, they correctly
 ## Roles
 In addition to the new rules listed above, THavalon offers almost a dozen new or reworked roles. It should be noted that not all roles listed here will be in any given game. There will always be the appropriate number of Good and Evil roles for the number of players in the game, but beyond that the roles present are randomized. This means that for roles that see a list of other roles, there is no guarantee that they will see as many people as expected. For example, Percival may only see one person, and they must then determine whether that person is Merlin or Morgana. It is also possible for someone to see no one; if there is neither a Merlin nor a Morgana, Percival will only be aware that neither of these roles are present in the current game. 
 
-The one exception to roles being generated independently is that, in games with at least 7 players, a single Lover (e.g. a Tristan with no Iseult or vice versa) will always be converted to Uther during the initalization of the game. This means that there cannot be both Lovers and Uther in any given game. 
+### Substitutions 
+In games of 7 players or more, players with certain roles (Tristan/Iseult, Guinevere, Percival) will have their role changed into an alternative role if none of the roles they have information about are present. 
+
+- A lone Lover (Tristan with no Iseult or vice versa) will become Uther. 
+- A lone Percival (Percival with no Merlin and no Morgana) will become Galahad.
+- A lone Guinevere (Guinevere with no Arthur, no Lancelot, and no Maelegant) will become Ygraine. [Ygraine's conditions are so precise that she will only appear once per 504 10-player games; this will be changed eventually.] 
 
 The only time that roles are guaranteed to be in the game is during 9 player games; both Pelinor and the Questing Beast roles are guaranteed to appear in 9 player games.
 
@@ -137,6 +142,11 @@ Merlin is a valid target for Assassination.
 Percival's role is unchanged from the base rules of Avalon. They know which players have the Merlin or Morgana roles, but not which role is possessed by either player. 
 
 - Percival sees Merlin and Morgana, indistinguishably. 
+
+#### Galahad 
+Galahad is a Good role that replaces a lone Percival in games with at least 7 players. Galahad is told which evil roles are present in the game, but receives no information as to which players possess any of these roles. 
+
+Galahad cannot appear in games with less than 7 players, or in a game where both Percival and either Merlin or Morgana are present. 
 
 #### Tristan and Iseult 
 Tristan and Iseult ("The Lovers") are two Good roles that know each other as Good. 
@@ -168,6 +178,10 @@ Arthur only appears in games with at least 7 players.
 ##### Ability: Proclamation 
 After two Quests have Failed, you may (but are not required to) formally declare as Arthur, establishing you as a Good player for the remainder of the game. You may still propose teams, vote on proposals, and be selected to go on Quests, as usual. You may use this ability at any point in the game after two Quests have Failed.
 
+#### Ygraine 
+Ygraine is a Good role that replaces a lone Guinevere in games with at least 7 players. Ygraine is told one player who has an evil role (other than Mordred). (Due to the limited number of roles, Ygraine's existence in 8 or 10 player also informs the player with Ygraine that the good roles present in the game are Merlin, Percival, Tristan, and Iseult, plus Gawain in 10 player.) 
+
+Ygraine cannot appear in games with less than 7 players, nor can she appear in a game where both Guinevere and any of Arthur, Lancelot, or Maelegant are present. 
 
 #### Gawain 
 Gawain is a Good role who possess a variant of the Inquisition ability. Furthermore, Gawain is shown a list of three people, of which at least one player is Good. 
